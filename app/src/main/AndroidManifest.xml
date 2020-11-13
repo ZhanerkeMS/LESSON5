@@ -11,7 +11,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FIRSTapp">
 
-        <activity android:name=".MenuActivity1" />
+
+        <activity android:name=".MenuActivity"/>
         <activity android:name=".MainActivity"/>
 
         <activity android:name=".MenuAcvivity">
@@ -20,6 +21,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
 
     </application>
