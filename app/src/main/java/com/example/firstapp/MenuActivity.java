@@ -29,12 +29,21 @@ public class MenuActivity extends AppCompatActivity implements  View.OnClickList
     @Override
     public void onClick(View view) {
         if(view.getId() == R.id.btnMenu1) {
-            Intent menu1 = new Intent(this, MenuActivity.class);
+            Intent menu1 = new Intent(this, MenuAcvivity.class);
+            startActivity(menu1);
 
-            startActivity(menu1);
+        }
+        else if(view.getId() == R.id.btnMenu2) {
+            Intent menu2 = new Intent(this, menuactivity2.class);
+            startActivity(menu2);
+
         }else if(view.getId() == R.id.btnMenu2) {
-            Intent menu1 = new Intent(this, MenuActivity.class);
-            startActivity(menu1);
+            Intent menu3 = new Intent(this, menuactivity3.class);
+            startActivity(menu3);
+
+        } else {
+            Intent menu4 = new Intent(this, menuactivity4.class);
+            startActivity(menu4);
         }
     }
 }

@@ -6,7 +6,7 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MenuAcvivity  extends AppCompatActivity{
+public class menuactivity2  extends AppCompatActivity{
 
 
 
@@ -16,7 +16,7 @@ public class MenuAcvivity  extends AppCompatActivity{
     @Override
     protected void onCreate (Bundle savedInctanceState) {
         super.onCreate(savedInctanceState);
-        setContentView(R.layout.activity_menu1);
+        setContentView(R.layout.activity_menu2);
     }
 
 }
