@@ -28,8 +28,8 @@ public class MenuActivity1 extends AppCompatActivity implements  View.OnClickLis
 
     @Override
     public void onClick(View view) {
-        Intent menu1 = new Intent(this, MenuAcvivity.class);
-        startActivity(menu1);
+        Intent menu = new Intent(this, MenuActivity1.class);
+        startActivity(menu);
     }
 
     @Override
