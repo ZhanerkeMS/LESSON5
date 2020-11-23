@@ -3,18 +3,16 @@ package com.example.firstapp;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.IntentFilter;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
-public class MenuActivity1 extends AppCompatActivity implements  View.OnClickListener {
+public class MenuActivity1 extends AppCompatActivity implements  View.OnClickListener, main {
     Button btnBack;
 
     @Override
@@ -28,8 +26,8 @@ public class MenuActivity1 extends AppCompatActivity implements  View.OnClickLis
 
     @Override
     public void onClick(View view) {
-        Intent menu = new Intent(this, MenuActivity1.class);
-        startActivity(menu);
+        Intent menu1 = new Intent(this, MenuActivity1.class);
+        startActivity(menu1);
     }
 
     @Override
