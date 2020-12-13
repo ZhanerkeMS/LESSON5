@@ -12,50 +12,50 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class MenuActivity1 extends AppCompatActivity implements  View.OnClickListener, main {
-    Button btnBack;
+import com.example.menu.R;
+
+public class MenuActivity1 extends AppCompatActivity implements View.OnClickListener {
+    Button btn_Back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu1);
 
-        btnBack = findViewById(R.id.btnBack);
-        btnBack.setOnClickListener(this);
+        btn_Back = findViewById(R.id.btnBack);
+        btn_Back.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
-        Intent menu1 = new Intent(this, MenuActivity1.class);
-        startActivity(menu1);
-    }
-
-    @Override
+        if (view.getId() == R.id.btnBack) {
+            Intent main = new Intent(this, MainActivity.class);
+            startActivity(main);
+        }
+    } @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater menuInflater = getMenuInflater();
-        menuInflater.inflate(R.menu.main, menu);
+        menuInflater.inflate(R.menu.menu, menu);
 
         return true;
     }
 
     @Override
-    public boolean onCreateOptionsSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()){
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
             case R.id.menu_settings:
                 Toast.makeText(this, "Settings menu clicked", Toast.LENGTH_SHORT).show();
-
                 break;
             case R.id.menu_refresh:
                 Toast.makeText(this, "Refresh menu clicked", Toast.LENGTH_SHORT).show();
-
                 break;
             case R.id.menu_delete:
                 Toast.makeText(this, "Delete menu clicked", Toast.LENGTH_SHORT).show();
-
                 break;
             default:
-                return super.onContextItemSelected(item);
+                return super.onOptionsItemSelected(item);
         }
         return true;
     }
+
 }
