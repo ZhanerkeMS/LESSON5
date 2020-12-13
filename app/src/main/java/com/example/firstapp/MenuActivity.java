@@ -7,6 +7,8 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.navigationdraweractivity.R;
+
 public class MenuActivity extends AppCompatActivity implements  View.OnClickListener {
     Button btnMenu1, btnMenu2;
     Button btnMenu3, btnMenu4;
@@ -29,7 +31,7 @@ public class MenuActivity extends AppCompatActivity implements  View.OnClickList
     @Override
     public void onClick(View view) {
         if(view.getId() == R.id.btnMenu1) {
-            Intent menu1 = new Intent(this, MenuAcvivity.class);
+            Intent menu1 = new Intent(this, menuactivity2.class);
             startActivity(menu1);
 
         }

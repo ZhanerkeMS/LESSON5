@@ -26,7 +26,7 @@ public class MenuActivity11 extends AppCompatActivity implements View.OnClickLis
     @Override
     public void onClick(View view) {
         if (view.getId() == R.id.btnBack) {
-            Intent main = new Intent(this, MainActivity.class);
+            Intent main = new Intent(this, MenuActivity.class);
             startActivity(main);
         }
     } @Override
