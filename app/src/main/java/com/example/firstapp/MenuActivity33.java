@@ -12,10 +12,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.example.firstapp.storedatabase;
 import com.example.menu.R;
 
-class MenuActivity4 extends AppCompatActivity implements View.OnClickListener {
+class MenuActivity3 extends AppCompatActivity implements View.OnClickListener {
     Button btn_Back;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

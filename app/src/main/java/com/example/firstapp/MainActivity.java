@@ -2,66 +2,43 @@ package com.example.firstapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
 
+import com.example.menu.R;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    EditText number1, number2;
-    Button btnPlus;
-    Button btnMinus;
-    Button btnMulti;
-    Button btnDivide;
-    TextView getResults;
-
+    Button btn_Menu1, btn_Menu2, btn_Menu3, btn_Menu4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.calculator);
-
-        number1 = findViewById(R.id.edit_number1);
-        number2 = findViewById(R.id.edit_number2);
-
-        btnPlus = findViewById(R.id.btn_plus);
-        btnMinus = findViewById(R.id.btn_minus);
-        btnMulti = findViewById(R.id.btn_multi);
-        btnDivide = findViewById(R.id.btn_divide);
-
-        getResults = findViewById(R.id.textView);
-
-        btnPlus.setOnClickListener(this);
-        btnMinus.setOnClickListener(this);
-        btnDivide.setOnClickListener(this);
-        btnMulti.setOnClickListener(this);
-
-
+        setContentView(R.layout.activity_main);
+        btn_Menu1 = findViewById(R.id.btnMenu1);
+        btn_Menu2 = findViewById(R.id.btnMenu2);
+        btn_Menu3 = findViewById(R.id.btnMenu3);
+        btn_Menu4 = findViewById(R.id.btnMenu4);
+        btn_Menu1.setOnClickListener(this);
+        btn_Menu2.setOnClickListener(this);
+        btn_Menu3.setOnClickListener(this);
+        btn_Menu4.setOnClickListener(this);
     }
     @Override
-    public void onClick(View view){
-        int res = 0;
-
-        if(view.getId() == R.id.btn_plus){
-            res = Integer.parseInt(number1.getText().toString())
-                    + Integer.parseInt(number2.getText().toString());
+    public void onClick(View view) {
+        if (view.getId() == R.id.btnMenu1) {
+            Intent menu1 = new Intent(this, MenuActivity1.class);
+            startActivity(menu1);
+        } else if (view.getId() == R.id.btnMenu2) {
+            Intent menu2 = new Intent(this, MenuActivity2.class);
+            startActivity(menu2);
+        } else if (view.getId() == R.id.btnMenu3) {
+            Intent menu3 = new Intent(this, MenuActivity3.class);
+            startActivity(menu3);
+        } else if (view.getId() == R.id.btnMenu4) {
+            Intent menu4 = new Intent(this, MenuActivity4.class);
+            startActivity(menu4);
         }
-        else if(view.getId() == R.id.btn_minus){
-            res = Integer.parseInt(number1.getText().toString())
-                    - Integer.parseInt(number2.getText().toString());
-        }
-        else if(view.getId() == R.id.btn_multi){
-            res = Integer.parseInt(number1.getText().toString())
-                    * Integer.parseInt(number2.getText().toString());
-        }
-        else{
-            res = Integer.parseInt(number1.getText().toString())
-                    / Integer.parseInt(number2.getText().toString());
-
-        }
-
-        getResults.setText("Result: " + res);
     }
 }

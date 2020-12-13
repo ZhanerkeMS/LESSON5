@@ -1,17 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/main_settings"
+        android:title="Settings"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_baseline_settings">
 
-    <item
-        android:id="@+id/menu_settings"
-        android:icon="@drawable/ic_settings_white"
-        android:title="settings"
-        app:showAsAction="always"/>
+        <menu>
+            <item
+                android:id="@+id/menu_settings"
+                android:title="Settings" />
+            <item
+                android:id="@+id/menu_refresh"
+                android:title="Refresh" />
 
-    <item
-        android:id="@+id/menu_refresh"
-        android:title="refresh" />
-    <item
-        android:id="@+id/menu_delete"
-        android:title="delete" />
+            <item
+                android:id="@+id/menu_delete"
+                android:title="Delete" >
+
+                <menu>
+                    <item
+                        android:id="@+id/delete_activity"
+                        android:title="Delete activity" />
+                    <item
+                        android:id="@+id/delete_project"
+                        android:title="Delete project" />
+
+                    <item
+                        android:id="@+id/delete_file"
+                        android:title="Delete file" />
+                </menu>
+            </item>
+
+        </menu>
+    </item>
 </menu>
